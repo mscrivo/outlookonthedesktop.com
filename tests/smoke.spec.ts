@@ -42,6 +42,8 @@ test.describe('page smoke tests', () => {
 
     await expect(page.getByRole('heading', { level: 1 })).toHaveText('Frequently Asked Questions');
     await expect(page.locator('.faq-item')).toHaveCount(14);
+    // Answers are collapsed until their question is clicked.
+    await page.locator('.faq-item:has(a[href$="/issues"]) summary').click();
     await expect(page.getByRole('link', { name: 'GitHub issue tracker' })).toHaveAttribute(
       'href',
       'https://github.com/mscrivo/OotD/issues',

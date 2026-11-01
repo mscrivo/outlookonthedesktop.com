@@ -119,6 +119,8 @@ const jsonLd = structuredData
                   { 'is-active': isActive, 'is-external': isExternal, 'is-icon': isIcon },
                 ]}
                 href={item.href}
+                target={isExternal ? '_blank' : undefined}
+                rel={isExternal ? 'noopener' : undefined}
                 aria-current={isActive ? 'page' : undefined}
                 aria-label={isIcon ? item.label : undefined}
               >
@@ -155,7 +157,9 @@ const jsonLd = structuredData
         </p>
       </div>
       <div class="footer-links">
-        <a href={site.sourceUrl}>GitHub</a>
+        <a href={site.sourceUrl} target="_blank" rel="noopener">
+          GitHub
+        </a>
         <a href="/release-notes">Release notes</a>
       </div>
     </footer>
