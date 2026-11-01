@@ -8,6 +8,16 @@ import { compiledContent } from '../../public/ootdReleaseNotes.md';
 // The file opens with its own "# OotD Release Notes" heading; the page header
 // below supplies the h1 instead.
 const releaseNotesHtml = (await compiledContent()).replace(/^\s*<h1[^>]*>.*?<\/h1>/s, '');
+
+// Each "## version" heading starts a release; wrap each one in its own card.
+// "### Important" headings and the block after them become GitHub-style alerts.
+const releases = releaseNotesHtml
+  .replace(
+    /<h3[^>]*>(?:<em>)?important[^<]*(?:<\/em>)?<\/h3>\s*(<(ul|p)>[\s\S]*?<\/\2>)/gi,
+    '<div class="alert-important"><p class="alert-title">Important</p>$1</div>',
+  )
+  .split(/(?=<h2)/)
+  .filter((html) => html.trim());
 ---
 
 <BaseLayout
@@ -34,7 +44,11 @@ const releaseNotesHtml = (await compiledContent()).replace(/^\s*<h1[^>]*>.*?<\/h
     </div>
   </section>
 
-  <section class="section release-notes" set:html={releaseNotesHtml} />
+  <section class="section release-list">
+    {releases.map((html) => (
+      <article class="release-notes" set:html={html} />
+    ))}
+  </section>
 
   <section class="section">
     <p class="lead">
