@@ -213,6 +213,6 @@ export const faqs: FaqItem[] = [
     answer:
       'Report it on the GitHub issue tracker — search the existing issues first, and open a new one with details if it has not already been reported.',
     answerHtml:
-      'Report it on the <a href="https://github.com/mscrivo/OotD/issues">GitHub issue tracker</a> — search the existing issues first, and open a new one with details if it has not already been reported.',
+      'Report it on the <a href="https://github.com/mscrivo/OotD/issues" target="_blank" rel="noopener">GitHub issue tracker</a> — search the existing issues first, and open a new one with details if it has not already been reported.',
   },
 ];
