@@ -72,6 +72,13 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Links inside running text need more than color to stand out (WCAG 1.4.1). */
+p a,
+li a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 img {
   max-width: 100%;
   height: auto;
