@@ -10,7 +10,6 @@ export default defineConfig({
   integrations: [
     sitemap({
       serialize(item) {
-        item.lastmod = new Date().toISOString();
         if (item.url === 'https://outlookonthedesktop.com') {
           item.priority = 1.0;
           item.changefreq = 'monthly';
