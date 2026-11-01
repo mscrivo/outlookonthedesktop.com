@@ -10,7 +10,10 @@ const releaseDate = new Date(site.releaseDate).toLocaleDateString('en-US', {
 });
 ---
 
-<BaseLayout title="Download" description="Download the latest Outlook on the Desktop release.">
+<BaseLayout
+  title="Download"
+  description={`Download Outlook on the Desktop ${site.latestVersion}, a free Windows 10 and 11 utility that pins your Outlook Classic calendar, inbox, tasks, and notes to the desktop.`}
+>
   <section class="page-header">
     <p class="eyebrow">Latest release</p>
     <h1>Download Outlook on the Desktop</h1>

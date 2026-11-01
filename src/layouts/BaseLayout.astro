@@ -10,9 +10,17 @@ interface Props {
   image?: string;
   /** One or more JSON-LD objects to emit as <script type="application/ld+json">. */
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
+  /** Keep the page out of search results (e.g. the 404 page). */
+  noindex?: boolean;
 }
 
-const { title, description = site.description, image = site.ogImage, structuredData } = Astro.props;
+const {
+  title,
+  description = site.description,
+  image = site.ogImage,
+  structuredData,
+  noindex,
+} = Astro.props;
 const pageTitle = title ? `${title} | ${site.name}` : site.name;
 // `build.format: 'file'` makes pathnames end in `.html` (e.g. `/download.html`)
 // at build time, while dev serves clean URLs. Normalize both to the clean path
@@ -58,7 +66,11 @@ const jsonLd = structuredData
     <meta name="description" content={description} />
     <meta name="author" content="Michael Scrivo" />
     <meta name="theme-color" content={site.themeColor} />
-    <link rel="canonical" href={canonicalUrl} />
+    {noindex ? (
+      <meta name="robots" content="noindex" />
+    ) : (
+      <link rel="canonical" href={canonicalUrl} />
+    )}
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
