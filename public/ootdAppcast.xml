@@ -8,13 +8,13 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         <item>
-            <title>Version 5.7.1</title>
+            <title>Version 5.7.2</title>
             <sparkle:releaseNotesLink>
                 https://outlookonthedesktop.com/ootdReleaseNotes.md
             </sparkle:releaseNotesLink>
-            <pubDate>Sat, 03 Oct 2026 15:31:32 +0000</pubDate>
-            <enclosure url="https://github.com/mscrivo/OotD/releases/download/5.7.1/ootd-5.7.1.exe"
-                       sparkle:version="5.7.1" length="4278592" type="application/octet-stream" />
+            <pubDate>Fri, 06 Nov 2026 00:43:20 +0000</pubDate>
+            <enclosure url="https://github.com/mscrivo/OotD/releases/download/5.7.2/ootd-5.7.2.exe"
+                       sparkle:version="5.7.2" length="4279744" type="application/octet-stream" />
         </item>
     </channel>
 </rss>

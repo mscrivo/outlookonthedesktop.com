@@ -1,5 +1,19 @@
 # OotD Release Notes
 
+## 5.7.2
+
+### Important
+
+- OotD only works with Outlook Classic, not the "new" Outlook that Microsoft is pushing on everyone. If you have the "new" Outlook, you will need to switch back to the classic version to use OotD.
+
+Changes:
+
+- Updated to the latest .NET runtime (10.0.14), which includes security fixes
+
+Fixes:
+
+- OotD no longer fails with "There was an unknown error trying to run OotD" when started from a folder other than its install folder (for example, from a startup shortcut or another program)
+
 ## 5.7.1
 
 ### Important
