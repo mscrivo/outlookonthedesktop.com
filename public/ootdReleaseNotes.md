@@ -1,5 +1,19 @@
 # OotD Release Notes
 
+## 5.8.0
+
+### Important
+
+- OotD only works with Outlook Classic, not the "new" Outlook that Microsoft is pushing on everyone. If you have the "new" Outlook, you will need to switch back to the classic version to use OotD.
+
+Changes:
+
+- Upgraded to .NET 11 (11.0.0). The installer downloads and installs the .NET 11 Desktop Runtime if it isn't already present
+
+Fixes:
+
+- Turning off "Start with Windows" no longer crashes with "Access is denied" when the startup task was created by the installer. OotD now asks for administrator permission to remove it, and new startup tasks can be changed without it
+
 ## 5.7.2
 
 ### Important
