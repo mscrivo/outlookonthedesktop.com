@@ -16,6 +16,8 @@ const releases = releaseNotesHtml
     /<h3[^>]*>(?:<em>)?important[^<]*(?:<\/em>)?<\/h3>\s*(<(ul|p)>[\s\S]*?<\/\2>)/gi,
     '<div class="alert-important"><p class="alert-title">Important</p>$1</div>',
   )
+  // "Changes:", "Fixes:" etc. are styled as labels, so the trailing colon is redundant on the page.
+  .replace(/<p>([^<:]{1,30}):<\/p>(\s*<ul>)/g, '<p>$1</p>$2')
   .split(/(?=<h2)/)
   .filter((html) => html.trim());
 ---
@@ -29,7 +31,7 @@ const releases = releaseNotesHtml
     <h1>Release Notes</h1>
   </section>
 
-  <section class="section split">
+  <section class="section">
     <div class="callout">
       <h2>Get the latest version</h2>
       <p>Download OotD {site.latestVersion} from the download page.</p>
