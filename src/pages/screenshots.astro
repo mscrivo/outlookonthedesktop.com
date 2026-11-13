@@ -33,7 +33,7 @@ const fullSize = await Promise.all(
             format="webp"
           />
         </a>
-        <h3>{screenshot.title}</h3>
+        <h2>{screenshot.title}</h2>
       </article>
     ))}
   </section>
@@ -68,7 +68,7 @@ const fullSize = await Promise.all(
         lightboxImage.src = link.href;
         lightboxImage.alt = link.querySelector('img')?.alt ?? '';
         lightboxCaption.textContent =
-          link.closest('.screenshot')?.querySelector('h3')?.textContent ?? '';
+          link.closest('.screenshot')?.querySelector('h2')?.textContent ?? '';
         lightbox.showModal();
       });
     });

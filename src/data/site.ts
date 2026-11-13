@@ -184,7 +184,7 @@ export const faqs: FaqItem[] = [
       'Make sure Outlook Classic is installed and working, and update to the latest OotD release. Startup crashes are often caused by a damaged Office installation, so repairing or reinstalling Office (or using the Microsoft Office cleanup/repair tools) can help. Check the GitHub issue tracker if the problem persists.',
   },
   {
-    question: 'When using OotD, an error pops up that says "Could not read the Calendar".',
+    question: 'Why does OotD show a "Could not read the Calendar" error?',
     answer:
       'This usually points to a corrupted Outlook view or data file. Try running Outlook /cleanviews, and repair your OST/PST file if the error continues.',
   },
@@ -204,7 +204,7 @@ export const faqs: FaqItem[] = [
       'Exit OotD from the tray icon first (right-click the icon and choose Exit), then uninstall it from Windows Apps & Features (or Add/Remove Programs on older Windows).',
   },
   {
-    question: "I'm using Outlook 2010 and I can't click the Calendar when using OotD.",
+    question: "Why can't I click the calendar in OotD with Outlook 2010?",
     answer:
       'This was a Microsoft bug in the original Outlook 2010 release. Installing Office 2010 SP1 (or a later update) resolves it.',
   },
