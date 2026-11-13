@@ -18,8 +18,8 @@ const releaseDate = new Date(site.releaseDate).toLocaleDateString('en-US', {
     <p class="eyebrow">Latest release</p>
     <h1>Download Outlook on the Desktop</h1>
     <p class="lead">
-      Version {site.latestVersion} is available from GitHub releases, released
-      <time datetime={site.releaseDate}>{releaseDate}</time>.
+      Version {site.latestVersion} was released on{' '}
+      <time datetime={site.releaseDate}>{releaseDate}</time> and is available from GitHub releases.
     </p>
   </section>
 
@@ -46,11 +46,10 @@ const releaseDate = new Date(site.releaseDate).toLocaleDateString('en-US', {
     <div class="callout">
       <h2>Requirements</h2>
       <ul class="compat-list">
-        <li>Microsoft Outlook Classic (2010 or higher) is required.</li>
+        <li>Microsoft Outlook Classic (2010 or higher)</li>
         <li>Windows 10 or 11 (Windows 7 and XP support is available in older releases)</li>
         <li>
-          Microsoft .NET 10 (The setup program will download and install it for you if you don't
-          have it)
+          Microsoft .NET 11 Desktop Runtime (the installer downloads and installs it if needed)
         </li>
       </ul>
     </div>
